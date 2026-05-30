@@ -1,0 +1,989 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* outline:3px solid red; */
+}
+body {
+    font-family: "Gelasio", serif;
+    overflow-x: hidden;
+}
+/* section1 */
+.section1 {
+    height: 800px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+/* boxes */
+.box {
+    position: absolute;
+    height: 500px;
+    width: 330px;
+}
+.box2 {
+    left: 20%;
+    top: 70px;
+}
+.box3 {
+    left: 40%;
+    top: 140px;
+}
+.box4 {
+    left: 59%;
+    top: 210px;
+}
+.box5 {
+    left: 78%;
+    top: 300px;
+}
+/* image div */
+.img-div {
+    position: relative;
+}
+.logo {
+    position: absolute;
+    left: 47%;
+    top: 340px;
+}
+.right-back {
+    width: 100%;
+    position: absolute;
+}
+/* section2 */
+.section2 {
+    position: relative;
+    min-height: 800px;
+    background-color: antiquewhite;
+}
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+.check,.checking {
+    opacity: 0;
+}
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+.nav-right a {
+    color: black;
+    text-decoration: none;
+}
+input {
+    margin-left: 120px!important;
+    background-color: transparent!important;
+    border: none!important;
+    border-bottom: 2px solid black!important;
+    border-radius: 0px!important;
+}
+/* tea div */
+.tea-div {
+    position: relative;
+}
+.tea {
+    position: absolute;
+    left: 40%;
+    top: 40px;
+    z-index: 3;
+    animation: tea 3s both linear;
+    animation-timeline: view(70%);
+    animation-range: entry cover 500vh;
+}
+@keyframes tea {
+    0% {
+        transform: rotate(10deg);
+    }
+    10% {
+        transform: rotate(-30deg);
+    }
+    20% {
+        transform: translateY(60vh) rotate(40deg);
+        top:300px;
+        left: 30%;
+    }
+    30% {
+        transform: translateY(60vh) rotate(40deg);
+        top: 300px;
+        left: 30%;
+    }
+    40% {
+        transform: translateY(200vh) rotate(-40deg);
+        left: 40%;
+        top: 400px;
+    }
+    50% {
+        transform: translateY(200vh) rotate(-40deg);
+        left: 40%;
+        top: 400px;
+    }
+}
+/* bubble */
+.left-para {
+    position: absolute;
+    top: 250px;
+    z-index: 4;
+    left: 7%;
+    animation: left;
+    animation-timeline: view(50%);
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes left {
+    from {
+        opacity: 0.8;
+        transform: translate(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+/* coffee */
+.right-para {
+    position: absolute;
+    right: 6%;
+    top:480px;
+    z-index: 2;
+    animation: right;
+    animation-timeline: view(50%);
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes right {
+    from {
+        transform: translateX(100px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.left-para h2 {
+    font-size: 150px;
+    color: brown;
+}
+.bub:hover {
+    transform: translateY(30px);
+}
+.left-para p {
+    font-size: 20px;
+    width: 40%;
+}
+.left-para button {
+    background-color: brown;
+    padding: 10px;
+    border: none;
+    color: white;
+}
+.right-para h2 {
+    font-size: 150px;
+    color: white;
+}
+.right-para p {
+    font-size: 20px;
+    color: white;
+    margin-left: 50px;
+}
+/* section3 */
+.section3 {
+    position: relative;
+    background-color: antiquewhite;
+    min-height: 1000px;
+}
+/* meet */
+.meet,.cards,.tea2 {
+    position: absolute;
+}
+.meet {
+    left: 50%;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 19;
+    animation: meet linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes meet {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+/* card div */
+.cards {
+    left: 0px;
+    position: relative;
+    animation: cards linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes cards {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.card3 {
+    right: 70%;
+    position: absolute;
+    top: 300px;
+    z-index: 9;
+}
+.card2 {
+    position: absolute;
+    right: 60%;
+    top: 200px;
+    z-index: 7;
+}
+.card1 {
+    position: absolute;
+    right: 53%;
+    top: 120px;
+    z-index: 6;
+}
+.card4 {
+    position: absolute;
+    right:63%;
+    top: 420px;
+    z-index: 8;
+}
+.card5 {
+    position: absolute;
+    top: 500px;
+    right: 50%;
+    z-index: 5;
+}
+/* taste */
+.taste-para {
+    width: 70%;
+}
+.meet h2 {
+    font-size: 70px;
+    font-family: "Amarante", serif;
+}
+.brew {
+    color: brown;
+}
+.taste {
+    font-size: 50px;
+}
+.tase1 {
+    color: brown;
+}
+.shop {
+    width: 100px;
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+/* section4 */
+.section4 {
+    min-height: 800px;
+    background-color: antiquewhite;
+    position: relative;
+    font-family: "Oregano", cursive;
+}
+/* brewed */
+.brewed1,.brewed2,.naming,.heart {
+    position: absolute;
+}
+.naming p {
+    background-color: white;
+    box-shadow: inset 2px 2px 5px chocolate;
+    border-radius: 30px;
+    padding: 15px;
+    position: absolute;
+}
+p span {
+    font-size: 8px;
+    color: brown;
+}
+.heart {
+    left: 20%;
+    top: 100px;
+}
+/* variety names */
+.naming {
+    position: relative;
+}
+.name1 {
+    left: 10%;
+    top: 300px;
+}
+.name2 {
+    left: 15%;
+    top: 100px;
+}
+.name3 {
+    left: 60%;
+    top: 200px;
+}
+.name4 {
+    left: 40%;
+    top: 30px;
+}
+.name5 {
+    left: 70%;
+    top: 400px;
+}
+.name6 {
+    left: 75%;
+    top: 600px;
+}
+.name7 {
+    left: 25%;
+    top: 700px;
+}
+.key {
+    animation: key linear;
+    animation-timeline: view(50%);
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes key {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.brewed1 {
+    right: 10%;
+    font-size: 50px;
+    top: 30px;
+}
+.brewed2 {
+    right: 10%;
+    font-size: 50px;
+    top: 100px;
+    z-index: 20;
+}
+.fresh {
+    font-size: 50px;
+}
+/* section5 */
+.section5 {
+    min-height: 800px;
+    background-color: antiquewhite;
+}
+/* fruit div */
+.fruit-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: fruit linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes fruit {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.juice-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+/* middle div */
+.middle {
+    position: relative;
+}
+.mango-piece {
+    position: absolute;
+    top: 0;
+}
+.middle h2 {
+    font-size: 70px;
+    font-family: "Amarante", serif;
+}
+h2 span {
+    color: brown;
+}
+.middle p {
+    margin-left: 70px;
+    font-size: 20px;
+}
+.juice1:hover {
+    transform-style: preserve-3d;
+    animation: juice 2s infinite linear;
+}
+@keyframes juice {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.juice2:hover {
+    transform-style: preserve-3d;
+    animation: juice 2s infinite linear;
+}
+@keyframes juice {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.juice3:hover {
+    transform-style: preserve-3d;
+    animation: juice 2s infinite linear;
+}
+@keyframes juice {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.juice4:hover {
+    transform-style: preserve-3d;
+    animation: juice 2s infinite linear;
+}
+@keyframes juice {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+/* section6 */
+.section6 {
+    min-height: 800px;
+    background-color: antiquewhite;
+    position: relative;
+}
+/* back imges */
+.blurtea,.honey {
+    position: absolute;
+}
+.blurtea {
+    left: -100px;
+    animation: blurtea linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes blurtea {
+    from {
+        transform: translate(-200px);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+.honey {
+    right: 20px;
+    animation: honey linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes honey {
+    from {
+        transform: translate(200px);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+/* sip */
+.sip-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    animation: sip linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes sip {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.sip-div>h2 {
+    font-size: 70px;
+    font-family: "Amarante", serif;
+    width: 70%;
+    text-align: center;
+    z-index: 98;
+}
+.sip-div>p {
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+    z-index: 99;
+}
+/* card div */
+.cards-div {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    animation: cards linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes cards {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/* card */
+.card {
+    height: 300px;
+    width: 350px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+}
+.card:hover {
+    box-shadow: 3px 3px 7px black;
+}
+.card b,.card p {
+    font-size: 20px;
+}
+.card i {
+    font-size: 50px;
+}
+/* section7 */
+.section7 {
+    min-height: 500px;
+    background-color: antiquewhite;
+}
+/* head div */
+.head-div {
+    animation: head linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes head {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.head-div h2 {
+    font-size: 70px;
+    font-family: "Amarante", serif;
+}
+.head-div h2,.head-div p {
+    text-align: center;
+}
+h2 span {
+    color: brown;
+}
+/* comment div */
+.comment-div {
+    display: flex;
+    position: relative;
+    height: 300px;
+    align-items: end;
+    overflow: hidden;
+}
+/* comments */
+.comment {
+    height: 200px;
+    width: 300px;
+    box-shadow: inset 5px 5px 10px brown;
+    border: 1px solid brown;
+    border-radius: 30px;
+    padding-left: 30px;
+    position: relative;
+}
+.profiles {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+}
+.comment1 {
+    left: 20px;
+}
+.comment p {
+    width: 80%;
+    /* margin: 0px; */
+    font-size: 14px;
+}
+.fivestar {
+    height: 10px;
+    width: 70px;
+    margin: 0px;
+}
+.comment .profile,.fivestar {
+    margin-left: 100px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-family: "Sansita Swashed", system-ui;
+}
+.para {
+    margin-top: 30px;
+}
+.left {
+    display: flex;
+    gap: 100px;
+    animation: run 20s linear infinite;
+}
+@keyframes run {
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(-5000px);
+    }
+}
+/* footer */
+footer {
+    height: 300px;
+    background-color: brown;
+    color: white;
+    padding: 50px;
+}
+.end-div {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.end-div p {
+    margin-top: 20px;
+}
+.end-div b {
+    font-size: 20px;
+}
+.end-line {
+    width: 70%;
+}
+/* media query */
+@media only screen and (max-width:1250px) {
+    .box {
+        width: 20%;
+    }
+    nav {
+        font-size: 10px!important;
+    }
+    .nav-right {
+        display: none;
+    }
+    .tea {
+        top: 100px;
+        height: 400px;
+        width: 200px;
+    }
+    .left-para {
+        top: 170px;
+        left: 7%;
+    }
+    .right-para {
+        top:360px;
+        right: 12%;
+    }
+    .left-para h2,.right-para h2 {
+        font-size: 100px;
+    }
+    
+.fruit-div {
+    flex-wrap: wrap;
+}
+.cards-div {
+    justify-content: center;
+}
+.card {
+    margin: 40px;
+}
+
+.juice-div {
+    flex-wrap: wrap;
+}
+.section6 {
+    overflow: hidden;
+}
+.section2 {
+    overflow: hidden;
+}
+.end-div {
+    justify-content: center;
+    gap: 20px;
+}
+@keyframes right {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes left {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.heart {
+    left: 3%;
+}
+.end-div {
+        flex-wrap: wrap;
+    }
+    footer {
+        min-height: 800px;
+    }
+    /* nav {
+        position: fixed;
+    } */
+     .navdiv {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: 1s;
+    }
+    .check{
+        opacity: 1;
+        font-size: 30px;
+        color: black;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:900px) {
+    .logo {
+        left: 40%;
+    }
+    .middle h2 {
+        font-size: 50px;
+    }
+    .left-para {
+        left: 15%;
+    }
+    .meet {
+        left: 0%;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1000px) {
+    .tea-div {
+        min-height: 400px;
+    }
+    .tea {
+        height: 600px;
+        width: 300px;
+    }
+    .right-para {
+        top:550px;
+        right: 1%;
+    }
+    .right-para p {
+         color: black;
+    }
+    .left-para h2,.right-para h2 {
+        font-size: 50px;
+    }
+    .left-para p,.right-para p {
+        font-size: 15px;
+        margin-left: 0px;
+    }
+    .card1,.card2,.card3,.card4,.card5 {
+        height: 300px;
+        width: 300px;
+    }
+    .heart {
+        width: 800px;
+        height: 900px;
+        left: 0%;
+        top: 0px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:650px) {
+    .tea {
+        height: 400px;
+        width: 200px;
+        top: 100px;
+    }
+    .tea-div {
+        min-height: 300px;
+    }
+    .left-para {
+        top: 300px;
+    }
+    .right-para {
+        top:400px;
+        right: 1%;
+    }
+    .left-para h2,.right-para h2 {
+        font-size: 40px;
+    }
+    .left-para p,.right-para p {
+        font-size: 10px;
+        margin-left: 0px;
+        color: black;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:450px) {
+    .tea {
+        top: 
+        0px;
+    }
+    .right-para {
+        top: 150px;
+        left: 30px;
+        color: black;
+        z-index: 5;
+    }
+    .right-para h2 {
+        color: brown;
+    }
+    .tea-div {
+        min-height: 400px;
+    }
+    .card {
+        height: 350px;
+        width: 250px;
+    }
+    .card i {
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:900px) {
+    .meet {
+        top: 600px;
+        gap: 20px;
+    }   
+    .section3 {
+        min-height: 1400px;
+    }
+    .card1,.card2,.card3,.card4,.card5 {
+        height: 200px;
+        width: 200px;
+    }
+    .taste-para {
+        width: 80%;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:450px) {
+    .section3 {
+        min-height: 1500px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:800px) {
+    .tea {
+        height: 400px;
+        width: 200px;
+    }
+    .heart {
+        width: 200px;
+        height: 300px;
+        left: 50%;
+        top: 200px;
+    }
+    .brewed1 {
+        top: 0;
+    }
+    .brewed2 {
+        top: 70px;
+    }
+    .name1,.name2,.name3,.name4,.name5,.name6,.name7 {
+        left: 20%;
+    }
+    .name1 {
+        top: 150px;
+    }
+    .name2 {
+        top: 220px;
+    }
+    .name3 {
+        top: 290px;
+    }
+    .name4 {
+        top: 360px;
+    }
+    .name5 {
+        top: 430px;
+    }
+    .name6 {
+        top: 500px;
+    }
+    .name7 {
+        top: 570px;
+    }
+}
+@media only screen and (max-width:550px) {
+    .brewed1,.brewed2,.fresh {
+        font-size: 15px;
+        left: 30%;
+    }
+    .heart {
+        left: 30%;
+    }
+    .meet {
+        left: 0%;
+    }
+    footer {
+        height: 1200px;
+    }
+    .end-div {
+        flex-direction: column;
+    }
+    .head-div h2 {
+        font-size: 40px;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:650px) {
+    .card1,.card2,.card3,.card4,.card5 {
+        left: 30%;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:400px) {
+    .card1,.card2,.card3,.card4,.card5 {
+        left: 10%;
+    }
+}
